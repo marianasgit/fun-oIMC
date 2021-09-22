@@ -15,27 +15,25 @@ public class CalculadoraIMC {
 		System.out.println("     CALCULADORA IMC     ");
 		System.out.println("-------------------------");
 		
-		System.out.println("Qual o seu peso?");
+		System.out.print("Qual o seu peso? ");
 		calculadora.peso = leitor.nextInt();
 		
 		System.out.println();
-		System.out.println("Qual a sua altura?");
+		System.out.print("Qual a sua altura? ");
 		calculadora.altura = leitor.nextDouble();
 		
 		System.out.println();
 		
+		leitor.close();
+		
 		calculadora.calcularImc();
 		
-		System.out.println("Seu IMC é igual a: " + imc);
+		calculadora.obterStatus();
 		
+		//System.out.printf("Seu IMC é igual a: %.2f  =>  %s" , calculadora.imc, calculadora.status);
 		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("Seu IMC é igual a: " + calculadora.imc + " => " + calculadora.status);
+	
 	}
 
 }
